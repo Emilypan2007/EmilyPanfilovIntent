@@ -7,13 +7,99 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <EditText
+        android:id="@+id/display"
+        android:layout_width="324dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="75dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:text="+"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sub"
+        app:layout_constraintEnd_toEndOf="@+id/multiplication"
+        app:layout_constraintStart_toStartOf="@+id/multiplication"
+        app:layout_constraintTop_toTopOf="@+id/sub"
+        app:rippleColor="#FF00FF" />
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="-"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/division"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/plus"
+        app:layout_constraintTop_toBottomOf="@+id/display"
+        app:rippleColor="#FF00FF" />
+
+    <Button
+        android:id="@+id/multiplication"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginBottom="350dp"
+        android:text="*"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/division"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#FF00FF" />
+
+    <Button
+        android:id="@+id/division"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:text="/"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/multiplication"
+        app:layout_constraintEnd_toEndOf="@+id/sub"
+        app:layout_constraintStart_toStartOf="@+id/sub"
+        app:layout_constraintTop_toTopOf="@+id/multiplication"
+        app:rippleColor="#FF00FF" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="130dp"
+        android:layout_height="75dp"
+        android:text="A/C"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/equal"
+        app:layout_constraintStart_toStartOf="@+id/display"
+        app:rippleColor="#FF00FF" />
+
+    <Button
+        android:id="@+id/equal"
+        android:layout_width="130dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="50dp"
+        android:text="="
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/display"
+        app:layout_constraintTop_toBottomOf="@+id/division"
+        app:rippleColor="#FF00FF" />
+
+    <Button
+        android:id="@+id/credits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="credits"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/delete"
+        app:rippleColor="#FF00FF" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
